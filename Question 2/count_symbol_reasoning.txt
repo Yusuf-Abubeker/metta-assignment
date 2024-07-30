@@ -1,0 +1,15 @@
+Loop Invariant:
+The invariant for count-symbol is that it correctly counts occurrences of the specified symbol in the tree.
+
+Initialization:
+
+Base Case: If the tree is empty, there are no occurrences of the symbol, so the function correctly 
+returns 0.
+
+Maintenance:
+
+Recursive Case: For a non-empty tree, if the current node matches the symbol, the function counts it 
+and continues to count in the rest of the tree. If the node does not match, it just continues with the rest of the tree. This approach ensures that every instance of the symbol is counted, maintaining the invariant.
+Termination:
+
+End Case: When all nodes in the tree are processed, the function returns the total count of the symbol. The loop terminates once all nodes are examined, and the total count is accurately computed.

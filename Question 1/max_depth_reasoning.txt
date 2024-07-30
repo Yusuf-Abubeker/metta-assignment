@@ -1,0 +1,15 @@
+Loop Invariant:
+ For a tree, the invariant we're interested in is that the max-depth function correctly 
+ calculates the maximum depth of the tree at each recursive call.
+
+Initialization:
+When the tree is empty, the depth is 0. This correctly represents the maximum depth of an empty tree.
+Maintenance:
+For a non-empty tree, the function calculates the depth of each subtree and takes the maximum value,
+ adding 1 to account for the current level. The max function correctly keeps track of the deepest subtree encountered, 
+ thus maintaining the invariant that the maximum depth is being correctly calculated at each step.
+
+Termination:
+ When all nodes have been processed, the maximum depth returned is accurate because the function 
+ recursively computes the depth of each subtree and returns the greatest depth found plus one.
+  The function terminates when all nodes have been evaluated, and the depth of the entire tree is correctly determined.
