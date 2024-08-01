@@ -1,0 +1,54 @@
+symbol-exists function correctly determines whether a given symbol is present in the tree.
+
+Initialization:
+
+left-child Function:
+ Retrieves the left child of a node structured as ($node $left $right), where $left is the left child.
+ Designed to handle nodes and extract the left child directly from the node structure.
+
+right-child Function:
+ Retrieves the right child of a node structured as ($node $left $right), where $right is the right child.
+ Designed to handle nodes and extract the right child directly from the node structure.
+
+root Function:
+ Retrieves the root of a node structured as ($node $left $right), where $node is the root.
+ Designed to handle nodes and extract the root directly from the node structure.
+
+symbol-exists? Function:
+ Checks if a given symbol exists in the tree.
+ Designed to compare the symbol with the root, left child, and right child of the tree.
+
+Maintenance:
+
+left-child Function:
+ Consistently returns the left child for any valid node structure, ensuring correct access to the left child.
+
+right-child Function:
+ Consistently returns the right child for any valid node structure, ensuring correct access to the right child.
+
+root Function:
+ Consistently returns the root for any valid node structure, ensuring correct access to the root.
+
+symbol-exists? Function:
+ Ensures accurate symbol existence check by comparing the symbol with the root, left child, and right child of the tree. Uses nested if statements to handle comparisons.
+
+Termination:
+
+left-child Function:
+ Always terminates by returning the left child extracted from the node tuple.
+
+right-child Function:
+ Always terminates by returning the right child extracted from the node tuple.
+
+root Function:
+ Always terminates by returning the root extracted from the node tuple.
+
+symbol-exists? Function:
+ The function terminates by returning 'True' if the symbol matches the root, left child, or right child of the tree, otherwise returns 'False'.
+
+Example:
+Given the tree (a b d), the function call !(symbol-exists? (a b d) b) proceeds as follows:
+
+It checks if b is the root (a), which it is not.
+It then checks if b is the left child (b), which it is.
+The function returns 'True'.

@@ -1,0 +1,66 @@
+count-symbol is that it counts occurrences of the specified symbol in the tree.
+
+Initialization:
+
+left-child Function:
+ Retrieves the left child of a node structured as ($node $left $right).
+ Initializes by handling nodes and extracting the left child directly from the node structure.
+
+right-child Function:
+ Retrieves the right child of a node structured as ($node $left $right).
+ Initializes by handling nodes and extracting the right child directly from the node structure.
+
+root Function:
+ Retrieves the root of a node structured as ($node $left $right).
+ Initializes by handling nodes and extracting the root directly from the node structure.
+
+null? Function:
+ Checks if a node is null by comparing it with ().
+ Initializes by performing a comparison to determine if the node is null.
+
+leaf? Function:
+ Checks if a node is a leaf (i.e., has no children).
+ Initializes by verifying if both left and right children of the node are null using the null? function.
+
+equal? Function:
+ Compares two symbols for equality.
+ Initializes by performing a comparison between two symbols.
+
+count-symbol Function:
+ Counts the occurrences of a symbol in a tree.
+ Initializes by checking if the tree is a leaf using the leaf? function and comparing the symbol using the equal? function.
+
+Maintenance:
+
+left-child and right-child Functions:
+ Maintain consistent return of the left and right children for any valid node structure, ensuring correct access to the children.
+
+root Function:
+ Maintains consistent return of the root for any valid node structure, ensuring correct access to the root.
+
+null? Function:
+ Maintains accurate nullity checks by comparing the node with (), ensuring reliable null checks.
+
+leaf? Function:
+ Maintains accurate leaf identification by checking that both children are null. Uses null? function to verify the absence of children.
+
+equal? Function:
+ Maintains accurate comparison by checking if two symbols are equal.
+
+count-symbol Function:
+ Maintains accurate count of symbols by recursively traversing the tree. Adds the counts from the left and right subtrees and ensures that the current node's symbol is compared correctly.
+
+Termination:
+
+left-child, right-child, and root Functions:
+ Always terminate by returning the left child, right child, or root extracted from the node tuple.
+
+null? and equal? Functions:
+ Terminate by returning true or false based on whether the node is null or the symbols are equal.
+
+leaf? Function:
+ Terminates by returning true if both children are null, otherwise false.
+
+count-symbol Function:
+ Terminates by returning 1 if the tree is a leaf and the symbol matches, otherwise 0. If the tree is not a leaf, it terminates by summing the counts from the left and right subtrees.
+Summary:
